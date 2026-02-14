@@ -8,7 +8,7 @@ from io import BytesIO
 # --- 1. إعدادات الربط السحابي ---
 SHEET_ID = "10zzEveLjAHXsyLsItokbB8lxpjkYm6U8Ab-Exr4Qcg0"
 EXCEL_URL = f"https://docs.google.com/spreadsheets/d/{SHEET_ID}/export?format=xlsx"
-WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzhBKx8Ya6HNMSvntZW7UnXcRyHxAlPimrEv0PDIRLzVDEHHrfdX0s3ivrumAjlVDU/exec"
+WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzKV2GGIbArjSFdxl5g90fH-QdcaGDB0ZDbeQMKMU0UG5bIadOoQpSjNZhVllwm2qtO/exec"
 
 def to_excel(df):
     output = BytesIO()
@@ -184,3 +184,4 @@ elif menu == T['menu'][5]:
     d1 = st.date_input("From", datetime.date.today()-datetime.timedelta(30)); d2 = st.date_input("To", datetime.date.today())
     mask = (st.session_state.ledger['التاريخ/Date'].dt.date >= d1) & (st.session_state.ledger['التاريخ/Date'].dt.date <= d2)
     st.dataframe(st.session_state.ledger[mask], use_container_width=True)
+
